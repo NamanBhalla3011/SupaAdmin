@@ -9,7 +9,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!-- Font Awesome -->
-		<link rel="stylesheet" href="css/fontawesome.css" />
+		<!-- <link rel="stylesheet" href="css/fontawesome.css" /> -->
 		<!-- Main Stylesheet -->
 		<link rel="stylesheet" href="css/style.css" />
 		<!-- Favicon -->
@@ -20,144 +20,337 @@
 		<title></title>
 	</head>
 	<body>
-		<!-- Sidebar Navigation -->
-		<nav class="sidebar hoverable close">
-			<div class="logo_items flex">
-				<span class="nav_image">
-					<img src="images/logo.png" alt="logo_img" />
-				</span>
-				<span class="logo_name">SUPABETS</span>
-				<i class="fa fa-times" id="sidebar-close"></i>
-			</div>
+		<div class="body-grid">
+			<nav id="main-sidebar">
+				<ul>
+					<li class="sidebar-logo-item">
+						<span class="logo">Supabets</span>
+						<button id="toggle-btn">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000"
+							>
+								<path
+									d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"
+								/>
+							</svg>
+						</button>
+					</li>
 
-			<div class="menu_container">
-				<div class="menu_items">
-					<ul class="menu_item">
-						<li class="item">
-							<a href="#" class="link flex">
-								<i class="fa-solid fa-square-poll-vertical"></i>
-								<span>Dashboard</span>
-							</a>
-							<ul class="sub-menu">
-								<li><a class="link" href="#"> Payments</a></li>
-								<li><a class="link" href="#"> Registrations </a></li>
-								<li><a class="link" href="#"> Registrations Comparisoins </a></li>
-								<li><a class="link" href="#"> Alerts </a></li>
-							</ul>
-						</li>
-						<li class="item">
-							<a href="#" class="link flex">
-								<i class="fa fa-fw fa-coins"></i>
-								<span>Deposit</span>
-							</a>
-							<ul class="sub-menu">
-								<li><a class="link" href="#">Manage</a></li>
+					<li class="active">
+						<button onclick="toggleSubMenu(this)" class="dropdown-btn">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#5f6368"
+							>
+								<path
+									d="M640-520q17 0 28.5-11.5T680-560q0-17-11.5-28.5T640-600q-17 0-28.5 11.5T600-560q0 17 11.5 28.5T640-520Zm-320-80h200v-80H320v80ZM180-120q-34-114-67-227.5T80-580q0-92 64-156t156-64h200q29-38 70.5-59t89.5-21q25 0 42.5 17.5T720-820q0 6-1.5 12t-3.5 11q-4 11-7.5 22.5T702-751l91 91h87v279l-113 37-67 224H480v-80h-80v80H180Zm60-80h80v-80h240v80h80l62-206 98-33v-141h-40L620-720q0-20 2.5-38.5T630-796q-29 8-51 27.5T547-720H300q-58 0-99 41t-41 99q0 98 27 191.5T240-200Zm240-298Z"
+								/>
+							</svg>
+							<span>Deposit</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000000"
+							>
+								<path
+									d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+								/>
+							</svg>
+						</button>
+						<ul class="sub-menu">
+							<div>
+								<li><a class="link active" href="#">Manage</a></li>
 								<li><a class="link" href="#">Deposit Groups</a></li>
 								<li><a class="link" href="#">Campaigns</a></li>
-							</ul>
-						</li>
-						<li class="item">
-							<a href="#" class="link flex">
-								<i class="fa fa-fw fa-hand-holding-dollar"></i>
-								<span>Withdrawls</span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#">Link 1</a></li>
-								<li><a href="#">Link 2</a></li>
-								<li><a href="#">Link 3</a></li>
-								<li><a href="#">Link 4</a></li>
-							</ul>
-						</li>
-						<li class="item">
-							<a href="#" class="link flex">
-								<i class="fa fa-fw fa-building-columns"></i>
-								<span>Bank Statements</span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#">Link 1</a></li>
-								<li><a href="#">Link 2</a></li>
-								<li><a href="#">Link 3</a></li>
-								<li><a href="#">Link 4</a></li>
-							</ul>
-						</li>
-						<li class="item">
-							<a href="#" class="link flex">
-								<i class="fa fa-fw fa-ticket"></i>
-								<span>Vourchers</span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#">Link 1</a></li>
-								<li><a href="#">Link 2</a></li>
-								<li><a href="#">Link 3</a></li>
-								<li><a href="#">Link 4</a></li>
-							</ul>
-						</li>
-						<li class="item">
-							<a href="#" class="link flex">
-								<i class="fa fa-fw fa-user-group"></i>
-								<span>Customers</span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#">Link 1</a></li>
-								<li><a href="#">Link 2</a></li>
-								<li><a href="#">Link 3</a></li>
-								<li><a href="#">Link 4</a></li>
-							</ul>
-						</li>
-						<li class="item">
-							<a href="#" class="link flex">
-								<i class="fa fa-fw fa-file-lines"></i>
-								<span>Reports</span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#">Link 1</a></li>
-								<li><a href="#">Link 2</a></li>
-								<li><a href="#">Link 3</a></li>
-								<li><a href="#">Link 4</a></li>
-							</ul>
-						</li>
-						<li class="item">
-							<a href="#" class="link flex">
-								<i class="fa fa-fw fa-user-gear"></i>
-								<span>User Account</span>
-							</a>
-							<ul class="sub-menu">
-								<li><a href="#">Link 1</a></li>
-								<li><a href="#">Link 2</a></li>
-								<li><a href="#">Link 3</a></li>
-								<li><a href="#">Link 4</a></li>
-							</ul>
-						</li>
-					</ul>
+							</div>
+						</ul>
+					</li>
+
+					<li>
+						<button onclick="toggleSubMenu(this)" class="dropdown-btn">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000"
+							>
+								<path
+									d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"
+								/>
+							</svg>
+							<span>Withdrawls</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000000"
+							>
+								<path
+									d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+								/>
+							</svg>
+						</button>
+						<ul class="sub-menu">
+							<div>
+								<li><a class="link" href="#">Link 1</a></li>
+								<li><a class="link" href="#">Link 2</a></li>
+								<li><a class="link" href="#">Link 3</a></li>
+							</div>
+						</ul>
+					</li>
+
+					<li>
+						<button onclick="toggleSubMenu(this)" class="dropdown-btn">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000"
+							>
+								<path
+									d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"
+								/>
+							</svg>
+							<span>Bank Statements</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000000"
+							>
+								<path
+									d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+								/>
+							</svg>
+						</button>
+						<ul class="sub-menu">
+							<div>
+								<li><a class="link" href="#">Link 1</a></li>
+								<li><a class="link" href="#">Link 2</a></li>
+								<li><a class="link" href="#">Link 3</a></li>
+							</div>
+						</ul>
+					</li>
+
+					<li>
+						<button onclick="toggleSubMenu(this)" class="dropdown-btn">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000"
+							>
+								<path
+									d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"
+								/>
+							</svg>
+							<span>Vouchers</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000000"
+							>
+								<path
+									d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+								/>
+							</svg>
+						</button>
+						<ul class="sub-menu">
+							<div>
+								<li><a class="link" href="#">Link 1</a></li>
+								<li><a class="link" href="#">Link 2</a></li>
+								<li><a class="link" href="#">Link 3</a></li>
+							</div>
+						</ul>
+					</li>
+
+					<li>
+						<button onclick="toggleSubMenu(this)" class="dropdown-btn">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000"
+							>
+								<path
+									d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"
+								/>
+							</svg>
+							<span>Customers</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000000"
+							>
+								<path
+									d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+								/>
+							</svg>
+						</button>
+						<ul class="sub-menu">
+							<div>
+								<li><a class="link" href="#">Link 1</a></li>
+								<li><a class="link" href="#">Link 2</a></li>
+								<li><a class="link" href="#">Link 3</a></li>
+							</div>
+						</ul>
+					</li>
+
+					<li>
+						<button onclick="toggleSubMenu(this)" class="dropdown-btn">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000"
+							>
+								<path
+									d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"
+								/>
+							</svg>
+							<span>Reports</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000000"
+							>
+								<path
+									d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+								/>
+							</svg>
+						</button>
+						<ul class="sub-menu">
+							<div>
+								<li><a class="link" href="#">Link 1</a></li>
+								<li><a class="link" href="#">Link 2</a></li>
+								<li><a class="link" href="#">Link 3</a></li>
+							</div>
+						</ul>
+					</li>
+
+					<li>
+						<button onclick="toggleSubMenu(this)" class="dropdown-btn">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000"
+							>
+								<path
+									d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"
+								/>
+							</svg>
+							<span>User Account</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#000000"
+							>
+								<path
+									d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+								/>
+							</svg>
+						</button>
+						<ul class="sub-menu">
+							<div>
+								<li><a class="link" href="#">Link 1</a></li>
+								<li><a class="link" href="#">Link 2</a></li>
+								<li><a class="link" href="#">Link 3</a></li>
+							</div>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Page Content -->
+			<main class="content">
+				<div class="card">
+					<h1>Heading</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+						delectus voluptatem? Delectus earum facere nulla quae debitis nobis
+						nisi assumenda, molestias repudiandae doloribus a. Obcaecati
+						corporis ipsam delectus rerum non?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+						delectus voluptatem? Delectus earum facere nulla quae debitis nobis
+						nisi assumenda, molestias repudiandae doloribus a. Obcaecati
+						corporis ipsam delectus rerum non?
+					</p>
 				</div>
-
-				<!-- <div class="sidebar_profile flex">
-					<span class="nav_image">
-						<img src="images/logo.png" alt="logo_img" />
-					</span>
-					<div class="data_text">
-						<span class="name">David Oliva</span>
-						<span class="email">david@gmail.com</span>
-					</div>
-				</div> -->
-			</div>
-		</nav>
-
-		<!-- Overlay -->
-		<div class="overlay not-visible"></div>
-
-		<!-- Mobile Navigation with sidebar toggle -->
-		<nav class="mobile-nav">
-			<div class="mobile-nav-container">
-				<span class="nav_image">
-					<img src="images/logo.png" alt="logo_img" />
-				</span>
-				<span class="logo_name">SUPABETS</span>
-				<i class="fa fa-bars" id="sidebar-open"></i>
-			</div>
-		</nav>
-
-		<main class="content">...</main>
+				<div class="card">
+					<h1>Heading</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+						delectus voluptatem? Delectus earum facere nulla quae debitis nobis
+						nisi assumenda, molestias repudiandae doloribus a. Obcaecati
+						corporis ipsam delectus rerum non?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+						delectus voluptatem? Delectus earum facere nulla quae debitis nobis
+						nisi assumenda, molestias repudiandae doloribus a. Obcaecati
+						corporis ipsam delectus rerum non?
+					</p>
+				</div>
+				<div class="card">
+					<h1>Heading</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+						delectus voluptatem? Delectus earum facere nulla quae debitis nobis
+						nisi assumenda, molestias repudiandae doloribus a. Obcaecati
+						corporis ipsam delectus rerum non?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+						delectus voluptatem? Delectus earum facere nulla quae debitis nobis
+						nisi assumenda, molestias repudiandae doloribus a. Obcaecati
+						corporis ipsam delectus rerum non?
+					</p>
+				</div>
+				<div class="card">
+					<h1>Heading</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+						delectus voluptatem? Delectus earum facere nulla quae debitis nobis
+						nisi assumenda, molestias repudiandae doloribus a. Obcaecati
+						corporis ipsam delectus rerum non?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+						delectus voluptatem? Delectus earum facere nulla quae debitis nobis
+						nisi assumenda, molestias repudiandae doloribus a. Obcaecati
+						corporis ipsam delectus rerum non?
+					</p>
+				</div>
+			</main>
+		</div>
 		<!-- SCRIPTS -->
 		<script src="js/main.js"></script>
 	</body>
